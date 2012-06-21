@@ -34,9 +34,19 @@ class Dev(object):
     DEBUG = True
     SQLALCHEMY_ECHO = True
 
+    # DATABASE CONFIGURATION
+    MONGODB_HOST = 'localhost'
+    MONGODB_PORT = 27017
+    MONGODB_DATABASE = '%s_dev' % project_name
+
 
 class Testing(object):
     TESTING = True
     CSRF_ENABLED = False
     SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/%s_test.sqlite" % project_name
     SQLALCHEMY_ECHO = False
+
+    # DATABASE CONFIGURATION
+    MONGODB_HOST = 'localhost'
+    MONGODB_PORT = 27017
+    MONGODB_DATABASE = '%s_test' % project_name
