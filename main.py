@@ -8,7 +8,7 @@ default_blueprints = blueprints  # each as (blueprint_instance, url_preffix)
 
 def app_factory(config, app_name=None, blueprints=None):
     app_name = app_name or __name__
-    app = Flask(app_name)
+    app = Flask(app_name, static_url_path="")
 
     configure_app(app, config)
     configure_blueprints(app, blueprints)
