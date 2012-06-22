@@ -18,13 +18,12 @@ class Test(Command):
         ]
 
     def run(self, start_discovery):
-        import unittest
+        import nose
 
         if os.path.exists(start_discovery):
-            argv = [config.project_name, "discover"]
-            argv += ["-s", start_discovery]
+            argv = ["d", "--verbosity=2"]
 
-            unittest.main(argv=argv)
+            nose.run(argv=argv)
         else:
             print("Directory '%s' was not found in project root." % start_discovery)
 
