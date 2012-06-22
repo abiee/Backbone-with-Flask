@@ -2,7 +2,9 @@
 
 from flask import Flask, render_template
 
-default_blueprints = []  # each as (blueprint_instance, url_preffix)
+from views import blueprints
+
+default_blueprints = blueprints  # each as (blueprint_instance, url_preffix)
 
 def app_factory(config, app_name=None, blueprints=None):
     app_name = app_name or __name__
