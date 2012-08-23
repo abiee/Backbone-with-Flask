@@ -12,6 +12,11 @@
                 exports: 'Backbone'
             },
 
+            'marionette': {
+                deps: ['backbone'],
+                exports: 'Backbone.Marionette'
+            },
+
             'mustache': {
                 exports: 'Mustache'
             }
@@ -19,6 +24,7 @@
 
         paths: {
             backbone: "libs/Backbone/backbone-min",
+            marionette: "libs/Backbone/backbone.marionette.min",
             underscore: "libs/Underscore/underscore-min",
             mustache: "libs/Mustache/mustache",
             jquery: 'libs/jQuery/jquery-1.7.2.min',
